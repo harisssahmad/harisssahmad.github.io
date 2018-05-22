@@ -15,6 +15,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: static;
+	z-index: -10;
 }
 
 .educationist {
@@ -77,6 +78,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: static;
+	z-index: -10;
 }
 
 .section-team {
@@ -99,6 +101,7 @@
 	background-image: linear-gradient(to right bottom, rgba(0, 99, 87, 0.9), rgba(0, 209, 183, 0.7)), url(../assets/img/bg1.jpg);
 	background-attachment: fixed;
 	position: static;
+	z-index: -10;
 }
 
 p {
