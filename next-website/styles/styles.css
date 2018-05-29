@@ -17,6 +17,10 @@
 	position: static;
 }
 
+@media only screen and (max-width: 810px) {
+.jumbotron { height: 97.5vh; margin-bottom: 0; }
+}
+
 .educationist {
 	color: #00796B;
 }
@@ -77,8 +81,13 @@
 	background-size: cover;
 	background-attachment: fixed;
 	position: static;
-	z-index: -10;
+	display: block;
 }
+
+@media only screen and (max-width: 810px) {
+.section-educationist { display: none; }
+}
+
 
 .section-team {
 	margin-left: 1.5vw;
@@ -90,17 +99,20 @@
 	color: white;
 	background-color: #00796B;
 	margin-bottom: 0;
-	height: 80px;
 	text-align: center;
 	font-family: 'Montserrat';
 	font-weight: 400;
 	line-height: 1.7;
 	font-size: 1.3rem;
 	padding-top: 25px;
+	padding-bottom: 25px;
 	background-image: linear-gradient(to right bottom, rgba(0, 99, 87, 0.9), rgba(0, 209, 183, 0.7)), url(../assets/img/bg1.jpg);
 	background-attachment: fixed;
 	position: static;
-	z-index: -10;
+}
+
+@media only screen and (max-width: 810px) {
+.footer { background-image: none; }
 }
 
 p {
@@ -118,6 +130,10 @@ p {
 	text-align: center;
 }
 
+@media only screen and (max-width: 810px) {
+.heading-secondary { width: 70%; }
+}
+
 .text-secondary {
 	padding-top: 2rem;
 	text-align: center;
@@ -125,6 +141,10 @@ p {
 	font-weight: 400;
 	line-height: 1.7;
 	font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 810px) {
+.text-secondary { padding-left: 1rem; padding-right: 1rem; }
 }
 
 .separator {
