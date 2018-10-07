@@ -40,10 +40,6 @@
 	color: #696969;
 }
 
-.subscript {
-	width: 80%;
-}
-
 #responsive-img {
 	animation: flipInY 1s linear;
 }
@@ -361,6 +357,17 @@ p.footer-text > a {
 
 .button {
 	width: 200px;
+}
+
+.social-icon {
+	width: 40px;
+	height: auto;
+}
+
+.responsive-img {
+	width: 90%;
+	height: auto;
+	margin: 0;
 }
 
 }
