@@ -27,7 +27,6 @@
 	font-weight: lighter;
 	font-size: 3em;
 	color: #005182;
-	/*color: black;*/
 	margin: 0 auto;
 	text-align: center;
 	font-weight: 700;
@@ -54,8 +53,9 @@
 	margin-top: 15vh;
 }
 
-.gap {
-	margin-top: 660px;
+.row-60 {
+	width: 60%;
+	margin-bottom: 25px;
 }
 
 .html-css-js {
@@ -92,29 +92,7 @@
     margin-top: 5vh;
 }
 
-.badge {
-	background-color: #005182;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 600;
-	padding: 4px 6px;
-	line-height: 1;
-	border-radius: 4px;
-	transition: .3s;
-	width: auto;
-	text-align: center;
-	display: inline-block;
-	vertical-align: middle;
-	color: white;
-	margin-top: -3px;
-}
-
-.click-text {
-	display: none;
-}
-
-.next-img {
+.logo-round {
 	-webkit-filter: drop-shadow(2px 2px 4px #8f8f8f);
 	filter: drop-shadow(2px 2px 4px #8f8f8f);
 	display: block;
@@ -122,66 +100,12 @@
     width: 270px;
     height: auto;
     opacity: 1;
-    transition: all 0.4s;
-    z-index: 1;
+    transition: all 0.4s cubic-bezier(.8,1.8,.75,.75);
 }
 
-.next-img-sketched:hover {
-	opacity: 0;
+.logo-round:hover {
+	transform: rotate(-10deg) scale(1.05);
 	cursor: pointer;
-}
-
-.next-img-sketched {
-	-webkit-filter: drop-shadow(2px 2px 4px #8f8f8f);
-	filter: drop-shadow(2px 2px 4px #8f8f8f);
-	display: block;
-    margin: auto;
-    width: 270px;
-    height: auto;
-    opacity: 1;
-    transition: all 0.4s;
-    z-index: 3;
-}
-
-.img-one {
-  position: absolute;
-  left: 40%;
-  margin-top: 5vh;
-}
-
-.educationist-img {
-	-webkit-filter: drop-shadow(2px 2px 4px #8f8f8f);
-	filter: drop-shadow(2px 2px 4px #8f8f8f);
-	display: block;
-    margin: auto;
-    width: 270px;
-    height: auto;
-    opacity: 1;
-    transition: all 0.4s;
-    z-index: 1;
-}
-
-.educationist-img-sketched:hover {
-	opacity: 0;
-	cursor: pointer;
-}
-
-.educationist-img-sketched {
-	-webkit-filter: drop-shadow(2px 2px 4px #8f8f8f);
-	filter: drop-shadow(2px 2px 4px #8f8f8f);
-	display: block;
-    margin: auto;
-    width: 270px;
-    height: auto;
-    opacity: 1;
-    transition: all 0.4s;
-    z-index: 3;
-}
-
-.img-two {
-  position: absolute;
-  left: 40%;
-  margin-top: 345px;
 }
 
 #sequence {
@@ -257,6 +181,7 @@ p.footer-text > a {
 	width: 100%;
 	display: flex;
 	align-items: center;
+	margin-top: 15px;
 }
 
 .button {
@@ -307,41 +232,8 @@ p.footer-text > a {
 	width: 100%;
 }
 
-.img-one {
-	left: 30%;
-}
-
-.next-img-sketched {
-	width: 40%;
-}
-
-.next-img {
-	width: 40%;
-}
-
-.img-two {
-	left: 30%;
-	margin-top: 210px;
-}
-
-.educationist-img-sketched {
-	width: 40%;
-}
-
-.educationist-img {
-	width: 40%;
-}
-
-.hover-text {
-	display: none;
-}
-
-.click-text {
-	display:inline-block;
-}
-
-.gap {
-	margin-top: 400px;
+.logo-round {
+	width: 200px;
 }
 
 .row {

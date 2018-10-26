@@ -158,7 +158,7 @@
   }
 
   .nav > .nav-container > #nav-check:checked + .nav-links > a {
-    animation: fadeInDown 1s cubic-bezier(.65,.18,.35,.97);
+    animation: fadeInDown 1s cubic-bezier(0.65, 0.18, 0.34, 1.2);
   }
 
   .nav > .nav-container > #nav-check:checked + .nav-links > a:nth-child(1) {
