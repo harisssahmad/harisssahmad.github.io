@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Haris Ahmad | Web Developer and Graphic Designer</title>
+	<title>Haris Ahmad | Portfolio Website</title>
 
 	<link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
 
@@ -21,7 +21,7 @@
 		<div class="nav-container">
 		  <div class="nav-header">
 		    <div class="nav-title">
-		      Haris<span style="color: black; font-weight: 700;">Ahmad</span>
+		      Haris<span style="color: black; font-weight: 700;"> Ahmad</span>
 		    </div>
 		  </div>
 		  <div class="nav-btn">
@@ -33,10 +33,9 @@
 		  </div>
 		  <input type="checkbox" id="nav-check">
 		  <div class="nav-links" id="nav-links">
-		    <a class="nav-link" href="#home" onclick="displayNone()">Home</a>
-		    <a class="nav-link" href="#websites" onclick="displayNone()">Websites</a>
-		    <a class="nav-link" href="#logos" onclick="displayNone()">Logos</a>
-		    <a class="contact-btn nav-link" href="#contact" onclick="displayNone()">Contact</a>
+		    <a class="nav-btn nav-link" href="#home" onclick="displayNone()">Home</a>
+		    <a class="nav-btn nav-link" href="#projects" onclick="displayNone()">Projects</a>
+		    <a class="nav-btn nav-link" href="#contact" onclick="displayNone()">Contact</a>
 		  </div>
 		</div>
 	</div>
@@ -45,36 +44,55 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12">
 				<h2 class="heading" id="heading">Hi! I am Haris Ahmad</h2>
-				<h3 class="subscript subheading" id="subheading">Living in Karachi, Pakistan, I am an influential frontend <span class="blue">web developer</span> and <span class="blue">graphic designer</span> currently learning back-end web development.</h3>
+				<h3 class="subscript subheading" id="subheading">
+					A Computer Science student in my <span class="blue">sophomore year</span>, I am passionate about <span class="blue">programming</span> and <span class="blue">art</span>; and I always look for ways to combine these two interests to make creative and meaningful projects.
+				</h3>
 			</div>
 			<img class="responsive-img col-md-6 col-sm-12" id="responsive-img" src="img/dev1.png">
 		</div>
 	</section>
 
-	<section class="section-two" id="websites">
-		<h2 class="heading">Websites done right</h2>
-		<p class="subheading">All the ingredients you need to make an awesome website</p>
-		<div class="html-css-js">
-			<img class="logo" src="img/html-logo.png"></span>
-			<img class="logo" src="img/css-logo.png"></span>
-			<img class="logo" src="img/js-logo.png"></span>
-		</div>
-
-		<div class="separator"></div>
-
-		<h2 class="heading">Size doesn&#x00027;t matter</h2>
-		<p class="subheading">Desktop, mobile, tablet or whatever &#x02014; your website looks cool everywhere</p>
-		<img class="responsive-img" src="img/responsive.png">
-
-		<div class="separator"></div>
-
-		<h2 class="heading" id="logos">Your idea, your logo</h2>
-		<p class="subheading">Turning plans into brands</p>
-		<br>
-			<div class="row row-60">
-				<span class="col-md-6"><img class="logo-round" src="img/next-logo.png"></span>
-				<span class="col-md-6"><img class="logo-round" src="img/educationist-logo.png"></span>
-				<span class="col-md-12"><img class="logo-round" src="img/garage-logo.png"></span>
+	<section class="section-two" id="projects">
+		<h2 class="heading">Projects</h2>
+		<p class="subheading">A project catalogue ranging from Web, Android and Windows computers:</p>
+			<div class="container">
+				<div class="row">
+					<div class="wrapper">
+					  	<ul>
+						    <a href="https://play.google.com/store/apps/details?id=com.educationist.inc" target="_blank"  onclick="displayNone()">
+						    <li>
+						    	<img class="proPic" src="img/educationist.png"/>
+						      	<div class="info">
+							        <h3>Educationist <span class="tag">Application</span><span class="tag" id="play-store">Play Store</span></h3>
+							        <div class="list-body">
+							           <span>An android application providing an ad-free catalogue of O Level Past Papers and E-books to students.</span>
+						        	</div>
+						     	</div>
+						    </li></a>
+						    <a href="https://github.com/harisssahmad/flappy-shs" target="_blank" onclick="displayNone()">
+						    <li>
+						      	<img class="proPic shs-pic" src="img/flappy_shs.png"/>
+							    <div class="info">
+							        <h3>Flappy SHS <span class="tag">Game</span><span class="tag" id="windows">Windows</span></h3>
+							        <div class="list-body">
+							           <span>6 players. Different abilities. One mission: Go through pipes. University project written in C++ using Object Oriented Programming principles. Available to play on Windows. Source code on Github.</span>
+							        </div>
+							    </div>
+						    </li></a>
+						    <li>
+						      	<img class="proPic cs-pic" src="img/cyber_soar.png"/>
+							    <div class="info">
+							        <h3>Cyber Soar <span class="tag">Game</span><span class="tag" id="work-in-progress">Work In Progress</span></h3>
+							        <div class="list-body">
+							           <span>Flappy Bird except the bird is a robot which flies through multiple game modes (normal, reverse, anti-gravity), and added features. In short: Flappy Bird on steroids. Beta version will be out soon!</span>
+							        </div>
+							    </div>
+						    </li>
+					  
+					    </ul>
+					</div>
+				</div>
+				<div class="separator col-xl-12"></div>	
 			</div>
 
 	</section>
@@ -82,21 +100,18 @@
 	<section class="footer" id="contact">
 		
 		<h2 class="heading">Contact</h2>
-		<p class="subheading">Have an awesome idea? Your next <span id="sequence"></span> is going to look as stunning as your plan.</p>
-
 		<div class="container-for-button">
-			<a href="mailto:me.haris2003@gmail.com" class="button">Email Me</a>
+			<a href="mailto:harisss_ahmad@yahoo.com" class="button">Email Me</a>
 		</div>
 
 		<div class="social-icons">
 			<a href="https://www.behance.net/harisssahmad" id="behance" target="_blank"><img class="social-icon" src="img/behance.png"></a>
 			<a href="https://www.facebook.com/harisssahmad" id="facebook" target="_blank"><img class="social-icon" src="img/facebook.png"></a>
-			<a href="https://www.instagram.com/harisssahmad/" id="instagram" target="_blank"><img class="social-icon" src="img/instagram.png"></a>
-			<a href="https://twitter.com/harisssahmad" id="twitter" target="_blank"><img class="social-icon" src="img/twitter.png"></a>
+			<a href="https://www.instagram.com/histiltedtripod/" id="instagram" target="_blank"><img class="social-icon" src="img/instagram.png"></a>
 		</div>	
 
 	<footer>
-		<p class="footer-text">&copy; 2018 All rights reserved &#x02014; Created by Haris Ahmad.</p>
+		<p class="footer-text">&copy; 2022 All rights reserved &#x02014; Created by Haris Ahmad.</p>
 	</footer>
 
 	</section>
