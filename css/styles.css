@@ -75,7 +75,7 @@ li span{
 	background-color: #0c5198;
 }
 
-#work-in-progress {
+#in-progress {
 	background-color: #cf0000;
 }
 
@@ -339,12 +339,12 @@ li span{
 
 @media only screen and (max-width: 768px) {
 
-.img-two {
-	margin-top: 400px;
-}
-
 .gap {
 	margin-top: 760px;
+}
+
+.tag {
+	display: inline-block;
 }
 
 }
