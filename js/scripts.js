@@ -15,6 +15,7 @@ ScrollReveal().reveal('#Pro');
 ScrollReveal().reveal('#Ultimate');
 ScrollReveal().reveal('#Logo');
 ScrollReveal().reveal('#Logo-two');
+ScrollReveal().reveal('li')
 ScrollReveal().reveal('#Banner');
 ScrollReveal().reveal('#behance');
 ScrollReveal().reveal('#facebook', { delay: 500 });
