@@ -12,6 +12,7 @@ nav > .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 50;
 }
 
 nav > .nav-container > .nav-header {
@@ -28,6 +29,14 @@ nav > .nav-container > .nav-header > h3 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+nav > .nav-container > input {
+  display: none;
+}
+
+nav > .sm-nav-links {
+  display: none;
 }
 
 nav > .nav-container > .lg-nav-links {
@@ -66,5 +75,87 @@ nav > .nav-container > .lg-nav-links > ul > li > a {
 }
 
 @media (max-width:768px) {
+  nav > .nav-container > .nav-header > h3 {
+    font-size: 20px;
+  }
+
+  nav > .nav-container > .lg-nav-links > ul > li > a {
+    font-size: 16px;
+  }
+}
+
+/* Navbar for sm */
+
+@media (max-width:555px) {
+  nav > .nav-container > .lg-nav-links {
+    display: none;
+  }
+
+  nav > .nav-container > .nav-btn > label {
+    height: 19px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav > .nav-container > .nav-btn > label > .line{
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 6px;
+    background: #0e2431;
+  }
+
+  nav > .nav-container > .nav-btn > label > .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
   
+  nav > .nav-container > .nav-btn > label > .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  nav > .nav-container > .nav-btn > label > .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .line1-transform {
+    transform: rotate(45deg);
+  }
+  
+  .line2-transform {
+    transform: scaleY(0);
+  }
+  
+  .line3-transform {
+    transform: rotate(-45deg);
+  }
+
+  nav > .sm-nav-links {
+    z-index: 49;
+    height: 100vh;
+    width: 100vw;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .hide-links {
+    position: absolute;
+    top: 0;
+    right: 100vw;
+  }
+
+  .show-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
