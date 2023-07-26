@@ -3,120 +3,312 @@
 <head>
 	<title>Haris Ahmad | Portfolio Website</title>
 
-	<link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+	<link rel="icon" type="image/png" href="./img/favicon.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" type="text/css" href="css/animations.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
 
-	<script type="text/javascript" src="js/animate.js"></script>
+	<!-- Jetbrains Mono and Barlow Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Development Icons (by Devicons) -->	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+	<!-- 10PRINT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+	<script type="text/javascript" src="./js/tenPrint.js"></script>
+
+	<script defer src="js/animate.js"></script>
 </head>
 <body>
-
-	<div class="nav">
+	<nav id="navbar">
 		<div class="nav-container">
-		  <div class="nav-header">
-		    <div class="nav-title">
-		      Haris<span style="color: black; font-weight: 700;"> Ahmad</span>
-		    </div>
-		  </div>
-		  <div class="nav-btn">
-		    <label for="nav-check">
-		      <span class="line-1"></span>
-		      <span class="line-2"></span>
-		      <span class="line-3"></span>
-		    </label>
-		  </div>
-		  <input type="checkbox" id="nav-check">
-		  <div class="nav-links" id="nav-links">
-		    <a class="nav-btn nav-link" href="#home" onclick="displayNone()">Home</a>
-		    <a class="nav-btn nav-link" href="#projects" onclick="displayNone()">Projects</a>
-		    <a class="nav-btn nav-link" href="#contact" onclick="displayNone()">Contact</a>
-		  </div>
-		</div>
-	</div>
-
-	<section class="section-one" id="home">
-		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-12">
-				<h2 class="heading" id="heading">Hi! I am Haris Ahmad</h2>
-				<h3 class="subscript subheading" id="subheading">
-					A Computer Science student in my <span class="blue">sophomore year</span>, I am passionate about <span class="blue">programming</span> and <span class="blue">art</span>; and I always look for ways to combine these two interests to make creative and meaningful projects.
-				</h3>
+			<div class="nav-header">
+				<h3><a href="/">haris.</a></h3>
 			</div>
-			<img class="responsive-img col-md-6 col-sm-12" id="responsive-img" src="img/dev1.png">
+			<div class="nav-btn">
+				<label for="nav-check">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</label>
+			</div>
+			<input type="checkbox" id="nav-check" onclick="toggleNav()">
+			<div class="lg-nav-links">
+				<ul>
+					<li><a href="#hero">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
 		</div>
-	</section>
+		<div id="sm-nav-links" class="sm-nav-links hide-links">
+			<ul>
+				<li><a href="#hero" onclick="hideNav()">Home</a></li>
+				<li><a href="#projects" onclick="hideNav()">Projects</a></li>
+				<li><a href="#about" onclick="hideNav()">About</a></li>
+				<li><a href="#contact" onclick="hideNav()">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
-	<section class="section-two" id="projects">
-		<h2 class="heading">Projects</h2>
-		<p class="subheading">A project catalogue ranging from Web, Android and Windows computers:</p>
-			<div class="container">
+	<main>
+
+		<section class="hero" id="hero">
+			<div class="hero-container">
 				<div class="row">
-					<div class="wrapper">
-					  	<ul>
-						    <a href="https://play.google.com/store/apps/details?id=com.educationist.inc" target="_blank"  onclick="displayNone()">
-						    <li>
-						    	<img class="proPic" src="img/educationist.png"/>
-						      	<div class="info">
-							        <h3>Educationist <span class="tag">Application</span><span class="tag" id="play-store">Play Store</span></h3>
-							        <div class="list-body">
-							           <span>An android application providing an ad-free catalogue of O Level Past Papers and E-books to students.</span>
-						        	</div>
-						     	</div>
-						    </li></a>
-						    <a href="https://github.com/harisssahmad/flappy-shs" target="_blank" onclick="displayNone()">
-						    <li>
-						      	<img class="proPic shs-pic" src="img/flappy_shs.png"/>
-							    <div class="info">
-							        <h3>Flappy SHS <span class="tag">Game</span><span class="tag" id="windows">Windows</span></h3>
-							        <div class="list-body">
-							           <span>6 players. Different abilities. One mission: Go through pipes. University project written in C++ using Object Oriented Programming principles. Available to play on Windows. Source code on Github.</span>
-							        </div>
-							    </div>
-						    </li></a>
-						    <a href="https://play.google.com/store/apps/details?id=com.harisssahmad.cybersoar" target="_blank" onclick="displayNone()">
-						    <li>
-						      	<img class="proPic cs-pic" src="img/cyber_soar.png"/>
-							    <div class="info">
-							        <h3>Cyber Soar <span class="tag">Game</span><span class="tag" id="play-store">Play Store</span></h3>
-							        <div class="list-body">
-							           <span>Flappy Bird except the bird is a robot which flies through multiple game modes (normal, reverse, anti-gravity), and added features. In short: Flappy Bird on steroids. Beta version out now!</span>
-							        </div>
-							    </div>
-						    </li></a>
-					  
-					    </ul>
+					<div class="desktop-right col-md-6 col-sm-12">
+						<h1 class="animate__animated animate-init-lg-left animate-init-sm-left">
+							Hello, world!<br>I&apos;m Haris Ahmad.
+						</h1>
+					</div>
+					<div class="desktop-left col-md-6 col-sm-12">
+						<p class="animate__animated animate-init-lg-right animate-init-sm-left">
+							A junior-year Computer Science student 
+							studying at FAST NUCES Karachi.
+						</p>
 					</div>
 				</div>
-				<div class="separator col-xl-12"></div>	
 			</div>
+		</section>
 
-	</section>
+		<section class="tools-and-tech">
+			<div class="tools-and-tech-container">
+				<div class="heading animate__animated animate-init-lg-left animate-init-sm-simple animate__delay-1s">
+					<h1>
+						Tools & Technologies I have worked with:
+					</h1>
+				</div>
+				<div class="grid animate__animated animate-init-lg-left animate__delay-1s">
+					<i class="devicon-c-plain-wordmark colored" alt=""></i>
+					<i class="devicon-cplusplus-plain-wordmark colored"></i>
+					<i class="devicon-python-plain-wordmark colored"></i>
+					<i class="devicon-bash-plain colored"></i>
+					<i class="devicon-html5-plain-wordmark colored"></i>
+					<i class="devicon-css3-plain-wordmark colored"></i>
+					<i class="devicon-javascript-plain colored"></i>
+					<i class="devicon-bootstrap-plain-wordmark colored"></i>
+					<i class="devicon-processing-plain-wordmark colored"></i>
+					<i class="devicon-mongodb-plain-wordmark colored"></i>
+					<i class="devicon-express-original-wordmark colored"></i>
+					<i class="devicon-nodejs-plain-wordmark colored"></i>
+					<i class="devicon-react-original-wordmark colored"></i>
+					<i class="devicon-linux-plain colored"></i>
+					<i class="devicon-git-plain-wordmark colored"></i>
+					<i class="devicon-github-original-wordmark colored"></i>
+					<i class="devicon-godot-plain-wordmark colored"></i>
+					<i class="devicon-photoshop-plain colored"></i>
+					<i class="devicon-illustrator-plain colored"></i>
+					<i class="devicon-figma-plain colored"></i>
+					<i class="devicon-windows8-original colored"></i>
+				</div>
+			</div>
+		</section>
 
-	<section class="footer" id="contact">
-		
-		<h2 class="heading">Contact</h2>
-		<div class="container-for-button">
-			<a href="mailto:harisss_ahmad@yahoo.com" class="button">Email Me</a>
+		<section class="projects" id="projects">
+			<div class="project-container">
+
+				<div class="project-item row">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-init-lg-left animate-lg-left animate-init-sm-left animate-sm-left">
+						<div class="top">
+							<p class="item-heading">
+								01 / NERDLE <span class="sm-only"><img src="./img/nerdle-img.png" width="48px" height="auto" alt=""></span>
+							</p>
+							<p class="item-description">
+								A WORDLE clone created as semester project 
+								for my Data Structures course. Source code 
+								on Github.
+							</p>
+							<p class="item-tools">
+								Made using: 
+								<i class="devicon-cplusplus-plain-wordmark colored first"></i>
+								<!-- SFML icon -->
+								<svg style="width: 40px;margin-top: -5px;color: rgb(120, 180, 42);" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>SFML</title><path d="M12.187.3336C11.1144.312 9.8776.863 7.9587 2.241L3.162 5.7258C.252 7.8401-.839 8.5272.6917 13.3288l1.8322 5.639c1.1115 3.4208 1.4278 4.6711 6.4675 4.6991H14.92c3.5969 0 4.884.085 6.4678-4.6991l1.8319-5.639c1.1115-3.421 1.5903-4.618-2.4703-7.603L15.953 2.241h-.0004C14.4069 1.1178 13.4026.358 12.187.3336zm-.1624 1.8837c.0652.0015.1303.0048.1953.01 1.0784.0831 1.6791.6384 2.3401 1.1186l.0193.0193-2.128 8.1684h-.9257L9.404 3.3652c.0067-.006.0118-.0137.0192-.0193.7741-.5944 1.5245-1.0708 2.4109-1.125l.1905-.0036zM16.128 4.489h.0008l.0896.0643 3.8771 2.8158c.9207.632 1.6776 1.2778 1.9282 2.3144.2542 1.0514-.0947 1.7946-.3472 2.5716l-2.1082 6.506c-.3166 1.0708-.699 1.9873-1.6073 2.5459-.9213.5666-1.7352.4693-2.5523.4693H8.568c-1.117.03-2.1064-.0413-2.9187-.7329-.8236-.7012-.982-1.5052-1.2344-2.2823l-2.1151-6.506c-.3745-1.0545-.6065-2.021-.1993-3.0087.4123-1 1.1262-1.397 1.7872-1.8773l3.8767-2.8158.0835-.0579.8358 3.208-.2121.1543-2.771 2.0058c-.5628.409-.667.5092-.7135.5465.012.0598.0363.2851.2379.8486l2.1279 6.5446c.1988.6723.2754.8034.2958.855.0652.0084.2856.0495.8743.0322h6.8853c.6295 0 .8264-.0174.8997-.0193.0264-.0569.1413-.252.3086-.8229l2.1281-6.551c.194-.5974.2404-.804.2571-.8615-.048-.0451-.2023-.2149-.6879-.5464l-2.803-2.0316-.2186-.1607.8358-3.208h-.0001z" fill="#78b42a"></path></svg>
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="https://github.com/harisssahmad/nerdle" target="_blank">More about this project</a>
+						</div>
+					</div>
+					<div class="right col-md-6 hide-sm nerdle-img">
+						<img src="./img/nerdle-img.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
+					</div>
+				</div>
+
+				<div class="project-item row">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-right animate-sm-right">
+						<div class="top">
+							<p class="item-heading">
+								02 / FLAPPY SHS <span class="sm-only"><img src="./img/flappy-shs-sm.png" height="48px" width="auto" alt=""></span>
+							</p>
+							<p class="item-description">
+								A Flappy Bird clone created as a semester project 
+								for my OOP course. Source code on Github.
+							</p>
+							<p class="item-tools">
+								Made using: 
+								<i class="devicon-photoshop-plain colored first"></i>
+								<i class="devicon-cplusplus-plain-wordmark colored"></i>
+								<!-- SFML icon -->
+								<svg style="width: 40px;margin-top: -5px;color: rgb(120, 180, 42);" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>SFML</title><path d="M12.187.3336C11.1144.312 9.8776.863 7.9587 2.241L3.162 5.7258C.252 7.8401-.839 8.5272.6917 13.3288l1.8322 5.639c1.1115 3.4208 1.4278 4.6711 6.4675 4.6991H14.92c3.5969 0 4.884.085 6.4678-4.6991l1.8319-5.639c1.1115-3.421 1.5903-4.618-2.4703-7.603L15.953 2.241h-.0004C14.4069 1.1178 13.4026.358 12.187.3336zm-.1624 1.8837c.0652.0015.1303.0048.1953.01 1.0784.0831 1.6791.6384 2.3401 1.1186l.0193.0193-2.128 8.1684h-.9257L9.404 3.3652c.0067-.006.0118-.0137.0192-.0193.7741-.5944 1.5245-1.0708 2.4109-1.125l.1905-.0036zM16.128 4.489h.0008l.0896.0643 3.8771 2.8158c.9207.632 1.6776 1.2778 1.9282 2.3144.2542 1.0514-.0947 1.7946-.3472 2.5716l-2.1082 6.506c-.3166 1.0708-.699 1.9873-1.6073 2.5459-.9213.5666-1.7352.4693-2.5523.4693H8.568c-1.117.03-2.1064-.0413-2.9187-.7329-.8236-.7012-.982-1.5052-1.2344-2.2823l-2.1151-6.506c-.3745-1.0545-.6065-2.021-.1993-3.0087.4123-1 1.1262-1.397 1.7872-1.8773l3.8767-2.8158.0835-.0579.8358 3.208-.2121.1543-2.771 2.0058c-.5628.409-.667.5092-.7135.5465.012.0598.0363.2851.2379.8486l2.1279 6.5446c.1988.6723.2754.8034.2958.855.0652.0084.2856.0495.8743.0322h6.8853c.6295 0 .8264-.0174.8997-.0193.0264-.0569.1413-.252.3086-.8229l2.1281-6.551c.194-.5974.2404-.804.2571-.8615-.048-.0451-.2023-.2149-.6879-.5464l-2.803-2.0316-.2186-.1607.8358-3.208h-.0001z" fill="#78b42a"></path></svg>
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="https://github.com/harisssahmad/flappy-shs" target="_blank">More about this project</a>
+						</div>
+					</div>
+					<div class="right col-md-6 hide-sm flappy-shs-img">
+						<img src="./img/flappy-shs.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
+					</div>
+				</div>
+
+				<div class="project-item row">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-left animate-sm-left">
+						<div class="top">
+							<p class="item-heading">
+								03 / CYBER SOAR <span class="sm-only"><img src="./img/cyber-soar-sm.png" height="48px" width="auto" alt=""></span>
+							</p>
+							<p class="item-description">
+								Further refinement to Flappy SHS created 
+								as a summer project to dive deeper into 
+								game development. Available to play on 
+								the Play Store.
+							</p>
+							<p class="item-tools">
+								Made using: 
+								<i class="devicon-godot-plain colored first"></i>
+								<i class="devicon-photoshop-plain colored"></i>
+								<i class="devicon-illustrator-plain colored"></i>
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="https://play.google.com/store/apps/details?id=com.harisssahmad.cybersoar" target="_blank">More about this project</a>
+						</div>
+					</div>
+					<div class="right col-md-6 hide-sm cyber-soar-img">
+						<img src="./img/cyber-soar.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
+					</div>
+				</div>
+
+				<div class="project-item row">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-right animate-sm-right">
+						<div class="top">
+							<p class="item-heading">
+								04 / EDUCATIONIST <span class="sm-only"><img src="./img/educationist-sm.png" height="48px" width="auto" alt=""></span>
+							</p>
+							<p class="item-description">
+								Ad-free O' Level past papers and e-books 
+								catalogue for students. Available on the 
+								Play Store.
+							</p>
+							<p class="item-tools">
+								Made using: 
+								<i class="devicon-html5-plain-wordmark colored first"></i>
+								<i class="devicon-css3-plain-wordmark colored"></i>
+								<i class="devicon-javascript-plain colored"></i>
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="https://play.google.com/store/apps/details?id=com.educationist.inc" target="_blank">More about this project</a>
+						</div>
+					</div>
+					<div class="right col-md-6 hide-sm educationist-img">
+						<img src="./img/educationist-transparent.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
+					</div>
+				</div>
+
+				<div class="project-item row">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-left animate-sm-left">
+						<div class="top">
+							<p class="item-heading">
+								05 / TO-DO LIST <span class="sm-only"><img src="./img/terminal-sm.png" width="48px" height="auto" alt=""></span>
+							</p>
+							<p class="item-description">
+								A To-Do list application that performs CRUD 
+								operations for my Programming Fundamentals 
+								semester project. Source code on Github.
+							</p>
+							<p class="item-tools">
+								Made using: 
+								<i class="devicon-c-plain-wordmark colored first"></i>
+							</p>
+						</div>
+						<div class="bottom">
+							<a href="https://github.com/harisssahmad/to-do-list" target="_blank">More about this project</a>
+						</div>
+					</div>
+					<div class="right col-md-6 hide-sm to-do-img">
+						<img src="./img/to-do.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="intro" id="about">
+			<div class="intro-container">
+				<div class="row">
+					<div class="left col-md-6" id="sketch-height">
+						<h1>
+							Frontend Web Developer / 
+							Student
+						</h1>
+						<p>
+							🌟 An enthusiastic and driven computer science student with a 
+							focus on <span class="bold black">web</span> and <span class="bold black">app development.</span><br><br>
+							🖥️ Proficient in front-end development and eager to master 
+							<span class="bold black">backend</span>, <span class="bold android">Android</span> 
+							and <span class="bold ios">iOS</span> app dev, as well as <span class="bold cloud">cloud computing</span> to solve problems 
+							effectively.<br><br>
+							📚 Currently in my 3rd year of Computer Science at <span class="bold blue">FAST NUCES</span> Karachi 
+							&mdash; actively seeking internship opportunities.
+						</p>
+					</div>
+
+					<div class="right col-md-6 col-sm-12" id="sketch-container">
+						<!-- Canvas comes here (tenPrint.js) -->
+					</div>
+				</div>
+				
+				
+			</div>
+		</section>
+
+	</main>
+
+	<footer id="contact">
+		<div class="footer-container">
+			<div class="row">
+				<div class="left col-md-6 col-sm-12">
+					<p>
+						I would be thrilled to be a 
+						part of your internship program
+					</p>
+					<img src="./img/arrow.png" alt="">
+				</div>
+				<div class="right col-md-6 col-sm-12">
+					<p class="email">
+						<a href="mailto:harisss_ahmad@yahoo.com">harisss_ahmad@yahoo.com</a>
+					</p>
+					<div class="links">
+						<a href="./src/Haris Ahmad - Résumé.pdf" target="_blank">View Résumé</a>
+						<a href="https://www.linkedin.com/in/harisssahmad/" target="_blank">LinkedIn</a>
+						<a href="https://github.com/harisssahmad" target="_blank">GitHub</a>
+						<a href="https://www.behance.net/harisssahmad" target="_blank">Behance</a>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<div class="social-icons">
-			<a href="https://www.behance.net/harisssahmad" id="behance" target="_blank"><img class="social-icon" src="img/behance.png"></a>
-			<a href="https://www.facebook.com/harisssahmad" id="facebook" target="_blank"><img class="social-icon" src="img/facebook.png"></a>
-			<a href="https://www.instagram.com/histiltedtripod/" id="instagram" target="_blank"><img class="social-icon" src="img/instagram.png"></a>
-		</div>	
-
-	<footer>
-		<p class="footer-text">&copy; 2022 All rights reserved &#x02014; Created by Haris Ahmad.</p>
 	</footer>
+	
 
-	</section>
-
-<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
