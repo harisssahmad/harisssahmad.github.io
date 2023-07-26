@@ -3,13 +3,15 @@
 <head>
 	<title>Haris Ahmad | Portfolio Website</title>
 
-	<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png"> -->
+	<link rel="icon" type="image/png" href="./img/favicon.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
 
 	<!-- Jetbrains Mono and Barlow Font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +20,17 @@
 	<!-- Development Icons (by Devicons) -->	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
+	<!-- 10PRINT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+	<script type="text/javascript" src="./js/tenPrint.js"></script>
+
+	<script defer src="js/animate.js"></script>
 </head>
 <body>
-	<nav>
+	<nav id="navbar">
 		<div class="nav-container">
 			<div class="nav-header">
-				<h3>haris.</h3>
+				<h3><a href="/">haris.</a></h3>
 			</div>
 			<div class="nav-btn">
 				<label for="nav-check">
@@ -35,33 +42,35 @@
 			<input type="checkbox" id="nav-check" onclick="toggleNav()">
 			<div class="lg-nav-links">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#hero">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="sm-nav-links" class="sm-nav-links hide-links">
 			<ul>
-				<li><a href="#" onclick="hideNav()">Home</a></li>
-				<li><a href="#" onclick="hideNav()">About</a></li>
-				<li><a href="#" onclick="hideNav()">Contact</a></li>
+				<li><a href="#hero" onclick="hideNav()">Home</a></li>
+				<li><a href="#projects" onclick="hideNav()">Projects</a></li>
+				<li><a href="#about" onclick="hideNav()">About</a></li>
+				<li><a href="#contact" onclick="hideNav()">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<main>
 
-		<section class="hero">
+		<section class="hero" id="hero">
 			<div class="hero-container">
 				<div class="row">
 					<div class="desktop-right col-md-6 col-sm-12">
-						<h1>
+						<h1 class="animate__animated animate-init-lg-left animate-init-sm-left">
 							Hello, world!<br>I&apos;m Haris Ahmad.
 						</h1>
 					</div>
 					<div class="desktop-left col-md-6 col-sm-12">
-						<p>
+						<p class="animate__animated animate-init-lg-right animate-init-sm-left">
 							A junior-year Computer Science student 
 							studying at FAST NUCES Karachi.
 						</p>
@@ -72,13 +81,13 @@
 
 		<section class="tools-and-tech">
 			<div class="tools-and-tech-container">
-				<div class="heading">
+				<div class="heading animate__animated animate-init-lg-left animate-init-sm-simple animate__delay-1s">
 					<h1>
 						Tools & Technologies I have worked with:
 					</h1>
 				</div>
-				<div class="grid">
-					<i class="devicon-c-plain-wordmark colored"></i>
+				<div class="grid animate__animated animate-init-lg-left animate__delay-1s">
+					<i class="devicon-c-plain-wordmark colored" alt=""></i>
 					<i class="devicon-cplusplus-plain-wordmark colored"></i>
 					<i class="devicon-python-plain-wordmark colored"></i>
 					<i class="devicon-bash-plain colored"></i>
@@ -103,14 +112,14 @@
 			</div>
 		</section>
 
-		<section class="projects">
+		<section class="projects" id="projects">
 			<div class="project-container">
 
 				<div class="project-item row">
-					<div class="left col-md-6 col-sm-12">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-init-lg-left animate-lg-left animate-init-sm-left animate-sm-left">
 						<div class="top">
 							<p class="item-heading">
-								01 / NERDLE <span class="sm-only"><img src="./img/nerdle-sm.png" alt=""></span>
+								01 / NERDLE <span class="sm-only"><img src="./img/nerdle-img.png" width="48px" height="auto" alt=""></span>
 							</p>
 							<p class="item-description">
 								A WORDLE clone created as semester project 
@@ -125,19 +134,19 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="#">More about this project</a>
+							<a href="https://github.com/harisssahmad/nerdle" target="_blank">More about this project</a>
 						</div>
 					</div>
 					<div class="right col-md-6 hide-sm nerdle-img">
-						<!-- Nothing to add here -->
+						<img src="./img/nerdle-img.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
 					</div>
 				</div>
 
 				<div class="project-item row">
-					<div class="left col-md-6 col-sm-12">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-right animate-sm-right">
 						<div class="top">
 							<p class="item-heading">
-								02 / FLAPPY SHS <span class="sm-only"><img src="./img/flappy-shs-sm.png" alt=""></span>
+								02 / FLAPPY SHS <span class="sm-only"><img src="./img/flappy-shs-sm.png" height="48px" width="auto" alt=""></span>
 							</p>
 							<p class="item-description">
 								A Flappy Bird clone created as a semester project 
@@ -152,19 +161,19 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="#">More about this project</a>
+							<a href="https://github.com/harisssahmad/flappy-shs" target="_blank">More about this project</a>
 						</div>
 					</div>
 					<div class="right col-md-6 hide-sm flappy-shs-img">
-						<!-- Nothing to add here -->
+						<img src="./img/flappy-shs.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
 					</div>
 				</div>
 
 				<div class="project-item row">
-					<div class="left col-md-6 col-sm-12">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-left animate-sm-left">
 						<div class="top">
 							<p class="item-heading">
-								03 / CYBER SOAR <span class="sm-only"><img src="./img/cyber-soar-sm.png" alt=""></span>
+								03 / CYBER SOAR <span class="sm-only"><img src="./img/cyber-soar-sm.png" height="48px" width="auto" alt=""></span>
 							</p>
 							<p class="item-description">
 								Further refinement to Flappy SHS created 
@@ -180,23 +189,23 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="#">More about this project</a>
+							<a href="https://play.google.com/store/apps/details?id=com.harisssahmad.cybersoar" target="_blank">More about this project</a>
 						</div>
 					</div>
 					<div class="right col-md-6 hide-sm cyber-soar-img">
-						<!-- Nothing to add here -->
+						<img src="./img/cyber-soar.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
 					</div>
 				</div>
 
 				<div class="project-item row">
-					<div class="left col-md-6 col-sm-12">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-right animate-sm-right">
 						<div class="top">
 							<p class="item-heading">
-								04 / EDUCATIONIST <span class="sm-only"><img src="./img/educationist-sm.png" alt=""></span>
+								04 / EDUCATIONIST <span class="sm-only"><img src="./img/educationist-sm.png" height="48px" width="auto" alt=""></span>
 							</p>
 							<p class="item-description">
 								Ad-free O' Level past papers and e-books 
-								catalogue for students, available on the 
+								catalogue for students. Available on the 
 								Play Store.
 							</p>
 							<p class="item-tools">
@@ -207,19 +216,19 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="#">More about this project</a>
+							<a href="https://play.google.com/store/apps/details?id=com.educationist.inc" target="_blank">More about this project</a>
 						</div>
 					</div>
 					<div class="right col-md-6 hide-sm educationist-img">
-						<!-- Nothing to add here -->
+						<img src="./img/educationist-transparent.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
 					</div>
 				</div>
 
 				<div class="project-item row">
-					<div class="left col-md-6 col-sm-12">
+					<div class="left col-md-6 col-sm-12 animate__animated animate-lg-left animate-init-sm-left animate-sm-left">
 						<div class="top">
 							<p class="item-heading">
-								05 / TO-DO LIST <span class="sm-only"><img src="./img/terminal-sm.png" alt=""></span>
+								05 / TO-DO LIST <span class="sm-only"><img src="./img/terminal-sm.png" width="48px" height="auto" alt=""></span>
 							</p>
 							<p class="item-description">
 								A To-Do list application that performs CRUD 
@@ -232,22 +241,72 @@
 							</p>
 						</div>
 						<div class="bottom">
-							<a href="#">More about this project</a>
+							<a href="https://github.com/harisssahmad/to-do-list" target="_blank">More about this project</a>
 						</div>
 					</div>
 					<div class="right col-md-6 hide-sm to-do-img">
-						<!-- Nothing to add here -->
+						<img src="./img/to-do.png" alt="" class="animate__animated animate__slower animate-init-lg-simple animate-lg-simple">
 					</div>
 				</div>
 
 			</div>
 		</section>
 
+		<section class="intro" id="about">
+			<div class="intro-container">
+				<div class="row">
+					<div class="left col-md-6" id="sketch-height">
+						<h1>
+							Frontend Web Developer / 
+							Student
+						</h1>
+						<p>
+							🌟 An enthusiastic and driven computer science student with a 
+							focus on <span class="bold black">web</span> and <span class="bold black">app development.</span><br><br>
+							🖥️ Proficient in front-end development and eager to master 
+							<span class="bold black">backend</span>, <span class="bold android">Android</span> 
+							and <span class="bold ios">iOS</span> app dev, as well as <span class="bold cloud">cloud computing</span> to solve problems 
+							effectively.<br><br>
+							📚 Currently in my 3rd year of Computer Science at <span class="bold blue">FAST NUCES</span> Karachi 
+							&mdash; actively seeking internship opportunities.
+						</p>
+					</div>
+
+					<div class="right col-md-6 col-sm-12" id="sketch-container">
+						<!-- Canvas comes here (tenPrint.js) -->
+					</div>
+				</div>
+				
+				
+			</div>
+		</section>
+
 	</main>
 
-	<!-- <footer>
-		
-	</footer> -->
+	<footer id="contact">
+		<div class="footer-container">
+			<div class="row">
+				<div class="left col-md-6 col-sm-12">
+					<p>
+						I would be thrilled to be a 
+						part of your internship program
+					</p>
+					<img src="./img/arrow.png" alt="">
+				</div>
+				<div class="right col-md-6 col-sm-12">
+					<p class="email">
+						<a href="mailto:harisss_ahmad@yahoo.com">harisss_ahmad@yahoo.com</a>
+					</p>
+					<div class="links">
+						<a href="./src/Haris Ahmad - Résumé.pdf" target="_blank">View Résumé</a>
+						<a href="https://www.linkedin.com/in/harisssahmad/" target="_blank">LinkedIn</a>
+						<a href="https://github.com/harisssahmad" target="_blank">GitHub</a>
+						<a href="https://www.behance.net/harisssahmad" target="_blank">Behance</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	
 
 	<script type="text/javascript" src="js/scripts.js"></script>

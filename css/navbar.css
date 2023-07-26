@@ -3,11 +3,20 @@
 }
 
 /*NAVBAR*/
-nav > .nav-container {
-  padding: 20px 8.333333%;
+#navbar {
+  height: 90px;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgba(255, 255, 255, 0); /* Start with transparent background */
+  transition: all 0.3s ease; /* Smooth transition on background-color */
+  z-index: 49;
+}
+
+nav > .nav-container {
+  padding: 20px 8.333333%;
+  position: relative;
   width: 83.333334%;
   display: flex;
   align-items: center;
@@ -22,13 +31,14 @@ nav > .nav-container > .nav-header {
   justify-content: center;
 }
 
-nav > .nav-container > .nav-header > h3 {
+nav > .nav-container > .nav-header > h3 > a {
   color: var(--main-black);
   font-family: 'JetBrains Mono', monospace;
   font-size: 34px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-decoration: none;
 }
 
 nav > .nav-container > input {
@@ -66,8 +76,11 @@ nav > .nav-container > .lg-nav-links > ul > li > a {
   text-decoration-line: underline;
 }
 
-@media (max-width:999px) {
-
+@media (max-width:991px) {
+  nav > .nav-container {
+    padding: 20px 16px;
+    width: auto;
+  }
 }
 
 @media (max-width:785px) {
