@@ -256,6 +256,19 @@ html, body {
 	background-blend-mode: normal, overlay;
 }
 
+.projects > .project-container > .project-item > .reinnovate-img {
+	/* Gradients */
+	background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%),
+	radial-gradient(87.39% 86.44% at 69.24% -0.00%, #F3A8FF 0%, #11004f 0.01%, rgba(185, 255, 200, 0.00) 100%),
+	radial-gradient(114.56% 110.90% at 21.63% -0.00%, #11004f 0%, rgba(169, 255, 240, 0.00) 100%),
+	radial-gradient(129.77% 91.60% at 56.53% 107.70%, #ffb2ca 0%, rgba(255, 255, 255, 0.00) 100%),
+	linear-gradient(rgba(196, 196, 196, 0.10), rgba(196, 196, 196, 0.10));
+
+	background-repeat: no-repeat, no-repeat;
+	background-position: center center, center center;
+	background-blend-mode: normal, overlay;
+}
+
 /* Intro Section */
 
 .intro > .intro-container {
