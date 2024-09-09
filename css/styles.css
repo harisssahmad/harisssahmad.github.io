@@ -164,6 +164,15 @@ html, body {
 	margin-bottom: 20px;
 }
 
+.cc {
+	color: var(--main-black);
+	font-family: 'Barlow', sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	text-decoration: none;
+}
+
 .projects > .project-container > .project-item > .left > .top > .item-tools {
 	display: flex;
 	align-items: center;
@@ -225,6 +234,16 @@ html, body {
 	background-image:
 	/* Gradients */
 	linear-gradient(130deg, #74d96a 0%, #318553 100%);
+
+	background-repeat: no-repeat, no-repeat;
+	background-position: center center, center center;
+	background-blend-mode: normal, overlay;
+}
+
+.projects > .project-container > .project-item > .tutona-img {
+	background-image:
+	/* Gradients */
+	linear-gradient(0deg, #30a2a5 0%, #026d70 100%);
 
 	background-repeat: no-repeat, no-repeat;
 	background-position: center center, center center;
@@ -411,6 +430,11 @@ footer > .footer-container > .row > .right > .links > a {
 	}
 
 	.projects > .project-container > .project-item > .left > .top > .item-description {
+		font-size: 20px;
+		text-align: justify;
+	}
+
+	.cc {
 		font-size: 20px;
 	}
 
